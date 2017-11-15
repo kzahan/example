@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Стили</title>
+  <link rel="stylesheet" type="text/css" href="1.css" />
+ 
+</head>
+<body>
+
+<% include header %>
+
+
+
+
+     <form style="margin-top:100px;margin-bottom:70px;margin-left:280px;margin-bottom:50px;" action="/" method="post">
+ 
+    <h3 style="color:#fff">Добавить комментарий</h3>
+    <p style="color:#fff"><label for="name">Имя &nbsp;&nbsp;</label><input type="text" name="name" id="name"></p>
+    <p style="color:#fff"><label for="email">Комментарий</label><textarea name="sok" id="sok" style="
+    display: -webkit-box;
+    width: 210px;
+    height: 70px;
+	 margin-top: 10px;
+"></textarea></p>
+
+<p><input type="submit" value="Отправить"></p>
+</form>
+<center><h1 style="color:#fff">Комментики</h1></center>
+
+
+<% for(var i=posts.length-1;i>=0;i--) {%>
+
+<div style="background:#fff;height:200px;width:800px;margin-bottom:20px;outline: 1px solid #6997b7;margin-left: 280px;
+">
+
+<div style="background:#e5e5e5;width:200px;height:170px;text-align:center;padding-top: 30px;
+">
+
+<p>Пользователь</p>
+<h2><%= posts[i].name %></h2>
+</div>
+
+
+
+<p style="position:relative;top: -200px;left: 240px;font-size: x-large;font-family: cursive;width: 500px;height: 150px;"><%=  posts[i].comment %></p>
+</div>
+<%}%>
+
+
+
+
+</body>
+</html>
